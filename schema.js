@@ -35,7 +35,8 @@ type Mutation {
     updateProject(projectId: String!, projectName: String!): Project,
     addBid(projectId: String!, buyerId: String!, bidAmount: Int!): Bid,
     updateBid(bidId: String!, bidAmount: Int!): Bid,
-    deleteBid(bidId: String!): Bid
+    deleteBid(bidId: String!): Bid,
+    findLowestBid(projectId: String!): [Bid]
 }
 `
 

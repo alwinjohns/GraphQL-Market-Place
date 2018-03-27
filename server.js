@@ -11,7 +11,7 @@ const port = 4000
 mongoose.connect(db.url)
 const connection = mongoose.connection
 connection.once('open', () => {
-    console.log('connection to db using mongoose! :)');
+    console.log('connection to db using mongoose!');
 })
 server.use('/graphiql', graphiqlExpress({
     endpointURL: "/graphql"

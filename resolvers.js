@@ -37,6 +37,9 @@ const resolvers = {
         },
         deleteBid: (root, { bidId }) => {
             return bidModel.findOneAndRemove({id: bidId})
+        },
+        findLowestBid: (root, { projectId }) => {
+            return bidModel.find({projectId}).sort({bidAmount: 1}).limit(1)
         }
     }
 }
